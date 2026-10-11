@@ -1,0 +1,19 @@
+🔎 ROUND 1 — THE CASE FILE
+Skills: Critical Thinking • OSINT • Problem Solving • Logical Reasoning
+
+Teams will be given different mystery cases to investigate. They must analyze the available clues, connect evidence, identify possible motives, suspects, timelines, contradictions, and build their own conclusion/conspiracy theory.
+
+Their conclusions will be evaluated using predefined case-solving metrics. Teams earning the highest scores will be shortlisted for Round 2 — the CTF.
+
+Round 1 flow:
+Case → Investigate → Analyze Clues → Build Theory → Score → Shortlist
+
+Summary:
+ROUND 1 — THE CASE FILE
+Investigate. Connect the clues. Uncover the motive.
+Analyze evidence, suspects & timelines and build your theory.
+Highest-scoring teams advance to Round 2: CTF.  
+Skills: Critical Thinking | OSINT | Problem Solving | Logical Reasoning
+
+Event Progression:
+🕵️ Case Investigation → 💻 CTF Challenge

@@ -1,0 +1,132 @@
+import React, { useState, useRef, useEffect } from 'react';
+import { Terminal as TerminalIcon, Send } from 'lucide-react';
+import { soundFx } from '../utils/audioEffects';
+
+interface TerminalProps {
+  onOpenRegisterModal: () => void;
+}
+
+export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterModal }) => {
+  const [inputVal, setInputVal] = useState('');
+  const [history, setHistory] = useState<Array<{ text: string; color?: string }>>([
+    { text: "$ cid-recon --target penthouse42 --dump-type memory", color: "text-outline-variant" },
+    { text: "[+] Target host initialized: 192.168.10.42 (Malhotra Private Workstation)", color: "text-secondary" },
+    { text: "[+] Memory Dump loaded: memory.raw (16.00 GB MD5: 9f82c...ba12)", color: "text-on-surface" },
+    { text: "[!] Volatility 3 Profile: Win10x64_19041 detected", color: "text-tertiary" },
+    { text: "[!] 6 Suspicious hidden processes detected: [pid: 4108 'inject_svchost.exe']", color: "text-primary" },
+    { text: "[+] Artifacts unlocked: 5 Capture The Flag tokens mapped to suspect dossiers.", color: "text-on-surface" },
+  ]);
+  const bottomRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [history]);
+
+  const handleCommand = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cmd = inputVal.trim().toLowerCase();
+    if (!cmd) return;
+
+    soundFx.playKeyClick();
+    setInputVal('');
+
+    const newEntries: Array<{ text: string; color?: string }> = [
+      { text: `investigator@zerohour:~$ ${inputVal}`, color: "text-secondary-container" }
+    ];
+
+    switch (cmd) {
+      case 'help':
+        newEntries.push(
+          { text: "COMMANDS: status | suspects | decrypt | scan | register | clear", color: "text-secondary" }
+        );
+        break;
+      case 'status':
+        newEntries.push(
+          { text: "[+] CASE #8849: Homicide of Vikram Malhotra // TOD: 00:05 AM IST", color: "text-primary" },
+          { text: "[+] Siphoned Fund: ₹47,00,00,000 wired to Oceanic Ventures LLC", color: "text-tertiary" }
+        );
+        break;
+      case 'suspects':
+        newEntries.push(
+          { text: "1. Riya Sharma (78%) | 2. Arjun Kapoor (94%) | 3. Meera Desai (72%)", color: "text-on-surface" },
+          { text: "4. Karan Singh (85%) | 5. Devraj Patel (88%) | 6. Commissioner Rao (91%)", color: "text-primary" }
+        );
+        break;
+      case 'decrypt':
+        newEntries.push(
+          { text: "[*] XOR Decrypting phone_image.enc with key 31650...", color: "text-secondary" },
+          { text: "[FLAG DISCOVERED]: CID{ph0n3_unlocked_31650}", color: "text-primary font-bold" }
+        );
+        soundFx.playBeep(920, 0.15);
+        break;
+      case 'scan':
+        newEntries.push(
+          { text: "[*] Port 2222/tcp OPEN // SUID /opt/tools/logviewer found", color: "text-tertiary" },
+          { text: "[+] Exploit path available in Round 2 Challenge 5.1", color: "text-secondary" }
+        );
+        break;
+      case 'register':
+        newEntries.push({ text: "[*] Opening official Unstop registration modal...", color: "text-primary" });
+        soundFx.playAlarm();
+        onOpenRegisterModal();
+        break;
+      case 'clear':
+        setHistory([]);
+        return;
+      default:
+        newEntries.push({ text: `Command not found: '${cmd}'. Try 'help' or 'register'.`, color: "text-outline" });
+        break;
+    }
+
+    setHistory((prev) => [...prev, ...newEntries]);
+  };
+
+  return (
+    <div className="mb-space-xl bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-2xl">
+      {/* Title Bar from Stitch */}
+      <div className="bg-surface-container-low px-4 py-2 border-b border-outline-variant flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-primary-container"></div>
+          <div className="w-3 h-3 rounded-full bg-tertiary"></div>
+          <div className="w-3 h-3 rounded-full bg-secondary-container"></div>
+          <span className="ml-2 text-label-sm font-label-sm text-outline-variant font-mono">
+            cid-forensics-bash v4.12 // tty1
+          </span>
+        </div>
+        <span className="text-label-sm font-label-sm text-secondary-container font-mono">
+          ENCRYPTED PROTOCOL 12-X
+        </span>
+      </div>
+
+      {/* Screen Buffer from Stitch */}
+      <div className="p-space-md font-mono text-label-md space-y-2 min-h-[220px] max-h-[380px] overflow-y-auto">
+        {history.map((line, idx) => (
+          <p key={idx} className={line.color || "text-on-surface"}>
+            {line.text}
+          </p>
+        ))}
+        <div ref={bottomRef} />
+      </div>
+
+      {/* Prompt Form */}
+      <form onSubmit={handleCommand} className="bg-surface-container-low border-t border-outline-variant px-4 py-3 flex items-center gap-3">
+        <span className="text-secondary-container font-mono text-xs sm:text-sm font-bold shrink-0">
+          investigator@zerohour:~$
+        </span>
+        <input
+          type="text"
+          value={inputVal}
+          onChange={(e) => setInputVal(e.target.value)}
+          placeholder="Type 'help', 'decrypt', 'status', 'register'..."
+          className="flex-1 bg-transparent border-none outline-none text-on-surface font-mono text-xs sm:text-sm placeholder:text-outline"
+        />
+        <button
+          type="submit"
+          className="px-3 py-1 bg-secondary-container/20 text-secondary border border-secondary-container/50 rounded font-label-sm font-bold uppercase transition-all"
+        >
+          EXEC
+        </button>
+      </form>
+    </div>
+  );
+};
