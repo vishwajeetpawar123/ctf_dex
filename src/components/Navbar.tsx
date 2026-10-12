@@ -122,7 +122,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
         </div>
 
         {/* Hazard Tape Divider Strip */}
-        <div className="w-full hazard-stripe h-2 overflow-hidden shadow-inner select-none border-y border-tertiary/40"></div>
+        <div className="w-full hazard-stripe h-4 overflow-hidden shadow-inner select-none border-y border-tertiary/40"></div>
 
         {/* Mobile Dropdown */}
         {isMobileOpen && (
