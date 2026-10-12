@@ -121,15 +121,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
 
         </div>
 
-        {/* Hazard Tape Banner Strip from Stitch */}
-        <div className="w-full hazard-stripe py-1 overflow-hidden shadow-inner flex items-center justify-around select-none border-y border-tertiary/40">
-          <div className="flex gap-12 font-label-sm font-bold text-surface-container-lowest uppercase tracking-widest whitespace-nowrap animate-pulse">
-            <span>▲ CRIME SCENE DO NOT CROSS // CID FORENSICS DIVISION</span>
-            <span>RESTRICTED ACCESS ONLY // CLEARANCE LVL 4 REQUIRED</span>
-            <span>HOMICIDE EVIDENCE BUFFER: RAM DUMP IN-PROGRESS</span>
-            <span>▲ CRIME SCENE DO NOT CROSS // CID FORENSICS DIVISION</span>
-          </div>
-        </div>
+        {/* Hazard Tape Divider Strip */}
+        <div className="w-full hazard-stripe h-2 overflow-hidden shadow-inner select-none border-y border-tertiary/40"></div>
 
         {/* Mobile Dropdown */}
         {isMobileOpen && (
