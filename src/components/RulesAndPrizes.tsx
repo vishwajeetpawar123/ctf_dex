@@ -8,16 +8,16 @@ interface RulesProps {
 
 export const RulesAndPrizes: React.FC<RulesProps> = ({ onOpenRegisterModal }) => {
   return (
-    <section className="py-space-xl px-space-md lg:px-margin max-w-7xl mx-auto border-t border-outline-variant/40" id="rules-engagement">
+    <section className="py-10 sm:py-space-xl px-3.5 sm:px-space-md lg:px-margin max-w-7xl mx-auto border-t border-outline-variant/40" id="rules-engagement">
       
       {/* Interactive CLI Terminal from Stitch */}
       <InteractiveTerminal onOpenRegisterModal={onOpenRegisterModal} />
 
       {/* Rules of Engagement Grid from Stitch */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-space-xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-10 sm:mb-space-xl">
         
         {/* Rule 1 */}
-        <div className="p-4 bg-surface-container-low border border-outline-variant rounded">
+        <div className="p-3.5 sm:p-4 bg-surface-container-low border border-outline-variant rounded-lg">
           <div className="text-secondary text-body-lg mb-2">
             <Users className="w-5 h-5 text-secondary" />
           </div>

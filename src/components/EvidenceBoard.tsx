@@ -38,24 +38,24 @@ export const EvidenceBoard: React.FC = () => {
     <section className="py-space-lg px-space-md lg:px-margin max-w-7xl mx-auto border-t border-outline-variant/40" id="case-file">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-md gap-3 sm:gap-4">
         <div>
-          <div className="text-label-sm font-label-sm text-primary uppercase tracking-widest font-mono">// THE CRIME SCENE</div>
-          <h2 className="text-headline-lg font-headline-lg text-on-surface uppercase mt-1">
+          <div className="text-[10px] sm:text-label-sm font-label-sm text-primary uppercase tracking-widest font-mono">// THE CRIME SCENE</div>
+          <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface uppercase mt-1 leading-tight">
             PENTHOUSE 42 FORENSIC CORKBOARD
           </h2>
         </div>
-        <div className="flex items-center gap-2 text-label-sm font-label-sm bg-surface-container px-3 py-1.5 border border-outline-variant rounded text-on-surface-variant font-mono">
-          <Eye className="w-4 h-4 text-primary" />
+        <div className="self-start md:self-auto flex items-center gap-2 text-xs sm:text-label-sm bg-surface-container px-3 py-1.5 border border-outline-variant rounded text-on-surface-variant font-mono">
+          <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
           <span>EVIDENCE PINNING ENGINE (5 ARTIFACTS)</span>
         </div>
       </div>
 
       {/* Corkboard Container */}
-      <div className="relative bg-surface-container-lowest border-2 border-outline-variant rounded-xl p-space-md sm:p-space-lg overflow-hidden shadow-2xl">
+      <div className="relative bg-surface-container-lowest border-2 border-outline-variant rounded-xl p-3 sm:p-space-lg overflow-hidden shadow-2xl">
         
-        {/* SVG Vector Threads */}
-        <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
+        {/* SVG Vector Threads - Displayed on desktop where coordinates align */}
+        <svg className="hidden md:block absolute inset-0 w-full h-full pointer-events-none z-10" xmlns="http://www.w3.org/2000/svg">
           <line className="string-vector" stroke="#ff5164" strokeWidth="2" x1="220" x2="520" y1="180" y2="120"></line>
           <line className="string-vector" stroke="#ff5164" strokeWidth="2" x1="220" x2="360" y1="180" y2="440"></line>
           <line className="string-vector" stroke="#00e3fd" strokeWidth="2" x1="520" x2="840" y1="120" y2="240"></line>
@@ -64,15 +64,15 @@ export const EvidenceBoard: React.FC = () => {
         </svg>
 
         {/* Bento Corkboard Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-space-md relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 sm:gap-space-md relative z-20">
           
-          {/* Evidence Item 1: Vikram Photo With Cross (Neatly Fitted) */}
+          {/* Evidence Item 1: Vikram Photo With Cross */}
           <div
             onClick={() => {
               soundFx.playBeep(680, 0.08);
               setActiveExhibit('A');
             }}
-            className="md:col-span-4 bg-surface-container-low border border-primary-container/80 p-3.5 rounded-lg relative transform -rotate-1 shadow-lg group hover:rotate-0 transition-transform cursor-pointer"
+            className="md:col-span-4 bg-surface-container-low border border-primary-container/80 p-3 sm:p-3.5 rounded-lg relative transform rotate-0 md:-rotate-1 shadow-lg group hover:rotate-0 transition-transform cursor-pointer"
           >
             {/* Push Pin */}
             <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary-container border-2 border-surface-container-lowest z-30 shadow-md"></div>
@@ -105,7 +105,7 @@ export const EvidenceBoard: React.FC = () => {
               soundFx.playBeep(680, 0.08);
               setActiveExhibit('B');
             }}
-            className="md:col-span-4 bg-surface-container-low border border-outline-variant p-3.5 rounded-lg relative transform rotate-1 shadow-lg hover:rotate-0 transition-transform cursor-pointer group"
+            className="md:col-span-4 bg-surface-container-low border border-outline-variant p-3 sm:p-3.5 rounded-lg relative transform rotate-0 md:rotate-1 shadow-lg hover:rotate-0 transition-transform cursor-pointer group"
           >
             <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary-container border-2 border-surface-container-lowest z-30 shadow-md"></div>
             
@@ -131,7 +131,7 @@ export const EvidenceBoard: React.FC = () => {
               soundFx.playBeep(680, 0.08);
               setActiveExhibit('C');
             }}
-            className="md:col-span-4 bg-surface-container-low border border-outline-variant p-3.5 rounded-lg relative transform -rotate-1 shadow-lg hover:rotate-0 transition-transform cursor-pointer group"
+            className="md:col-span-4 bg-surface-container-low border border-outline-variant p-3 sm:p-3.5 rounded-lg relative transform rotate-0 md:-rotate-1 shadow-lg hover:rotate-0 transition-transform cursor-pointer group"
           >
             <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary-container border-2 border-surface-container-lowest z-30 shadow-md"></div>
             
@@ -157,7 +157,7 @@ export const EvidenceBoard: React.FC = () => {
               soundFx.playBeep(680, 0.08);
               setActiveExhibit('D');
             }}
-            className="md:col-span-6 bg-surface-container-low border border-outline-variant p-3.5 rounded-lg relative transform rotate-1 shadow-lg cursor-pointer group"
+            className="md:col-span-6 bg-surface-container-low border border-outline-variant p-3 sm:p-3.5 rounded-lg relative transform rotate-0 md:rotate-1 shadow-lg cursor-pointer group"
           >
             <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-secondary-container border-2 border-surface-container-lowest z-30 shadow-md"></div>
             
@@ -189,7 +189,7 @@ export const EvidenceBoard: React.FC = () => {
               soundFx.playBeep(680, 0.08);
               setActiveExhibit('E');
             }}
-            className="md:col-span-6 bg-surface-container-low border border-outline-variant p-3.5 rounded-lg relative transform -rotate-1 shadow-lg cursor-pointer group"
+            className="md:col-span-6 bg-surface-container-low border border-outline-variant p-3 sm:p-3.5 rounded-lg relative transform rotate-0 md:-rotate-1 shadow-lg cursor-pointer group"
           >
             <div className="absolute -top-2.5 left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-tertiary border-2 border-surface-container-lowest z-30 shadow-md"></div>
             
@@ -219,8 +219,8 @@ export const EvidenceBoard: React.FC = () => {
 
       {/* Selected Exhibit Popover */}
       {activeExhibit && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-surface-container-low border-2 border-primary-container rounded-xl max-w-md w-full p-6 shadow-2xl relative animate-in fade-in zoom-in-95">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3.5 sm:p-4">
+          <div className="bg-surface-container-low border-2 border-primary-container rounded-xl max-w-md w-full p-5 sm:p-6 shadow-2xl relative animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setActiveExhibit(null)}
               className="absolute top-4 right-4 p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface"
@@ -263,3 +263,4 @@ export const EvidenceBoard: React.FC = () => {
     </section>
   );
 };
+

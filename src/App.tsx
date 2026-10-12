@@ -87,13 +87,13 @@ export function App() {
       />
 
       {/* Mobile Sticky Enlistment Bottom Bar */}
-      {showStickyBottom && (
-        <div className="sm:hidden fixed bottom-3 inset-x-3 z-50 animate-in slide-in-from-bottom duration-300">
-          <div className="p-2 bg-surface-container-low/95 border-2 border-primary-container rounded-xl shadow-2xl backdrop-blur-md flex items-center justify-between gap-2">
+      {showStickyBottom && !isRegisterModalOpen && (
+        <div className="sm:hidden fixed bottom-3 inset-x-3 z-40 animate-in slide-in-from-bottom duration-300">
+          <div className="p-2 bg-surface-container-low/95 border border-primary-container rounded-xl shadow-2xl backdrop-blur-md flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 pl-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-primary-container animate-ping shrink-0"></span>
-              <span className="font-label-sm text-[10px] text-on-surface uppercase font-bold tracking-wider">
-                ROUND 1 &amp; 2 OPEN
+              <span className="w-2 h-2 rounded-full bg-primary-container animate-ping shrink-0"></span>
+              <span className="font-mono text-[10px] text-on-surface uppercase font-bold tracking-wider">
+                ROUNDS 1 &amp; 2 OPEN
               </span>
             </div>
             <button
@@ -101,10 +101,10 @@ export function App() {
                 soundFx.playAlarm();
                 setIsRegisterModalOpen(true);
               }}
-              className="px-4 py-2 bg-primary-container text-surface-container-lowest font-label-md font-bold text-xs uppercase tracking-wider rounded-lg pulse-glow-crimson flex items-center gap-1.5"
+              className="px-3.5 py-2 bg-primary-container text-surface-container-lowest font-mono font-bold text-xs uppercase tracking-wider rounded-lg pulse-glow-crimson flex items-center gap-1.5 active:scale-95 transition-transform"
             >
-              <span>REGISTER ON UNSTOP</span>
-              <ArrowRight className="w-3.5 h-3.5 stroke-[3]" />
+              <span>REGISTER</span>
+              <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
             </button>
           </div>
         </div>

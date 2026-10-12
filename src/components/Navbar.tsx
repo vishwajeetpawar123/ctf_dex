@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, Shield, Terminal, ExternalLink, FileSearch, Layers, Users, BookOpen, HelpCircle } from 'lucide-react';
 import { soundFx } from '../utils/audioEffects';
 
@@ -11,58 +11,78 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('Case File');
 
+  // Close mobile drawer on escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMobileOpen) {
+        setIsMobileOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isMobileOpen]);
+
   const navLinks = [
-    { name: "Case File", href: "#case-file", icon: FileSearch },
-    { name: "Rounds 1 & 2", href: "#tournament-architecture", icon: Layers },
-    { name: "6 Suspects", href: "#suspects-dossier", icon: Users },
-    { name: "Intel & Rules", href: "#rules-engagement", icon: BookOpen },
-    { name: "FAQ", href: "#faq-section", icon: HelpCircle }
+    { name: "Case File", href: "#case-file", icon: FileSearch, detail: "Penthouse 42 Evidence" },
+    { name: "Rounds 1 & 2", href: "#tournament-architecture", icon: Layers, detail: "Investigation ➔ CTF" },
+    { name: "6 Suspects", href: "#suspects-dossier", icon: Users, detail: "Persons of Interest" },
+    { name: "Intel & Rules", href: "#rules-engagement", icon: BookOpen, detail: "CLI & Guidelines" },
+    { name: "FAQ", href: "#faq-section", icon: HelpCircle, detail: "Bounties & Clearance" }
   ];
 
   return (
     <>
-      <header className="sticky top-0 z-50 w-full border-b border-outline-variant bg-surface-container-low dark:bg-surface-container-lowest shadow-md backdrop-blur-md">
-        <div className="flex justify-between items-center w-full px-space-md lg:px-margin max-w-7xl mx-auto h-16">
+      <header className="sticky top-0 z-50 w-full bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/50 shadow-lg">
+        <div className="flex justify-between items-center w-full px-3.5 sm:px-space-md lg:px-margin max-w-7xl mx-auto h-14 sm:h-16">
           
-          {/* Brand & Case Identifier Cluster - No College Logo */}
-          <div className="flex items-center gap-space-md">
+          {/* Brand & Case Identifier Cluster */}
+          <div className="flex items-center gap-2.5 sm:gap-3.5 min-w-0">
             
-            {/* Optional Club Logo Only */}
+            {/* Club Logo */}
             <img
               src="/assets/club_logo.jpeg"
               alt="Club Logo"
-              className="w-9 h-9 object-contain rounded border border-outline-variant bg-surface-container p-0.5"
+              className="w-8 h-8 sm:w-9 sm:h-9 object-contain rounded border border-outline-variant bg-surface-container p-0.5 shrink-0"
               onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
             />
 
             <a
-              className="flex items-center gap-2.5 group cursor-pointer"
+              className="flex items-center gap-2 group cursor-pointer min-w-0"
               href="#hero"
               onClick={() => soundFx.playKeyClick()}
             >
-              <span className="relative flex h-3 w-3">
+              <span className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary-container"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-primary-container"></span>
               </span>
-              <div className="flex flex-col text-left">
-                <span className="text-label-lg font-label-lg tracking-wider text-primary group-hover:text-primary-container uppercase font-bold transition-colors">
+              <div className="flex flex-col text-left min-w-0">
+                {/* Mobile clean condensed title */}
+                <span className="sm:hidden text-xs font-mono font-bold tracking-wider text-primary group-hover:text-primary-container uppercase truncate transition-colors">
+                  CID // ZERO HOUR
+                </span>
+                <span className="sm:hidden text-[9px] font-mono text-outline-variant uppercase tracking-widest truncate">
+                  ACTIVE CASE #8849
+                </span>
+
+                {/* Desktop full title */}
+                <span className="hidden sm:inline text-label-md sm:text-label-lg font-mono tracking-wider text-primary group-hover:text-primary-container uppercase font-bold transition-colors truncate">
                   CID CYBER FORENSICS // ZERO HOUR
                 </span>
-                <span className="text-label-sm font-label-sm text-outline-variant uppercase tracking-widest hidden sm:inline">
+                <span className="hidden sm:inline text-label-sm font-mono text-outline-variant uppercase tracking-widest truncate">
                   UNIT 09 DIGITAL EVIDENCE TERMINAL
                 </span>
               </div>
             </a>
 
-            {/* Case Status Tag */}
-            <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 bg-surface-container border border-outline-variant rounded text-label-sm font-label-sm text-tertiary">
+            {/* Case Status Tag (Desktop) */}
+            <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 bg-surface-container border border-outline-variant rounded text-label-sm font-mono text-tertiary">
               <Shield className="w-3.5 h-3.5 text-tertiary" />
               <span>ACTIVE CASE: #8849</span>
             </div>
           </div>
 
-          {/* Neatly Buttonised Navigation Options */}
-          <nav className="hidden lg:flex items-center gap-2">
+          {/* Desktop Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2">
             {navLinks.map((link) => {
               const Icon = link.icon;
               const isActive = activeNav === link.name;
@@ -74,10 +94,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
                     soundFx.playKeyClick();
                     setActiveNav(link.name);
                   }}
-                  className={`px-3.5 py-1.5 rounded font-label-md font-medium uppercase tracking-wider transition-all duration-150 flex items-center gap-1.5 text-xs active:scale-95 ${
+                  className={`px-3 py-1.5 rounded font-mono font-medium uppercase tracking-wider transition-all duration-150 flex items-center gap-1.5 text-xs active:scale-95 ${
                     isActive
                       ? 'bg-surface-container-high border border-primary-container text-primary shadow-[0_0_12px_rgba(255,81,100,0.3)]'
-                      : 'bg-surface-container/70 hover:bg-surface-container-high border border-outline-variant/60 hover:border-secondary-container text-on-surface hover:text-secondary'
+                      : 'bg-surface-container/60 hover:bg-surface-container-high border border-outline-variant/60 hover:border-secondary-container text-on-surface hover:text-secondary'
                   }`}
                 >
                   <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-primary' : 'text-outline-variant group-hover:text-secondary'}`} />
@@ -88,20 +108,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
           </nav>
 
           {/* Trailing Action Cluster */}
-          <div className="flex items-center gap-space-sm">
+          <div className="flex items-center gap-2 sm:gap-space-sm shrink-0">
             
-            {/* Terminal Indicator */}
-            <div className="hidden sm:flex items-center gap-2 text-outline-variant pr-space-xs">
-              <Terminal className="w-4 h-4 text-secondary-container" />
+            {/* Terminal Indicator (Tablet/Desktop) */}
+            <div className="hidden md:flex items-center gap-1.5 text-outline-variant pr-1 font-mono text-xs">
+              <Terminal className="w-3.5 h-3.5 text-secondary-container" />
+              <span className="text-[10px] text-outline">PORT:2222</span>
             </div>
 
-            {/* Unstop Direct Portal CTA */}
+            {/* Mobile Compact CTA */}
             <button
               onClick={() => {
                 soundFx.playAlarm();
                 onOpenRegisterModal();
               }}
-              className="flex items-center gap-2 px-4 py-2 bg-primary-container text-surface-container-lowest font-label-md font-bold tracking-wider uppercase border border-primary rounded pulse-glow-crimson hover:bg-primary hover:text-on-primary active:scale-95 duration-100 ease-in-out cursor-pointer transition-all"
+              className="sm:hidden flex items-center gap-1 px-2.5 py-1.5 bg-primary-container text-surface-container-lowest font-mono font-bold text-[11px] uppercase tracking-wider rounded border border-primary pulse-glow-crimson hover:bg-primary active:scale-95 transition-all shadow-md"
+            >
+              <span>REGISTER</span>
+              <ExternalLink className="w-3 h-3 stroke-[2.5]" />
+            </button>
+
+            {/* Desktop / Tablet Full CTA */}
+            <button
+              onClick={() => {
+                soundFx.playAlarm();
+                onOpenRegisterModal();
+              }}
+              className="hidden sm:flex items-center gap-2 px-3.5 sm:px-4 py-2 bg-primary-container text-surface-container-lowest font-mono font-bold text-xs uppercase tracking-wider border border-primary rounded pulse-glow-crimson hover:bg-primary hover:text-on-primary active:scale-95 duration-100 ease-in-out cursor-pointer transition-all shadow-lg"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-surface-container-lowest opacity-75"></span>
@@ -110,23 +143,35 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
               <span>REGISTER ON UNSTOP</span>
             </button>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Hamburger Toggle */}
             <button
-              onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="lg:hidden p-2 rounded bg-surface-container border border-outline-variant text-on-surface hover:text-primary transition-colors"
+              onClick={() => {
+                soundFx.playKeyClick();
+                setIsMobileOpen(!isMobileOpen);
+              }}
+              aria-label="Toggle navigation"
+              className="lg:hidden p-2 rounded-lg bg-surface-container border border-outline-variant/80 text-on-surface hover:text-primary hover:border-primary-container active:scale-95 transition-all"
             >
-              {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileOpen ? <X className="w-4 h-4 sm:w-5 sm:h-5 text-primary" /> : <Menu className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           </div>
 
         </div>
 
-        {/* Hazard Tape Divider Strip */}
-        <div className="w-full hazard-stripe h-4 overflow-hidden shadow-inner select-none border-y border-tertiary/40"></div>
+        {/* Clean Cyber Neon Accent Line (replaces messy thick hazard tape) */}
+        <div className="w-full h-[1.5px] bg-gradient-to-r from-transparent via-primary-container/70 to-transparent"></div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Navigation Drawer / Overlay */}
         {isMobileOpen && (
-          <div className="lg:hidden bg-surface-container-low border-b border-outline-variant px-6 py-4 flex flex-col gap-2.5 animate-in slide-in-from-top duration-200">
+          <div className="lg:hidden bg-surface-container-low/95 backdrop-blur-xl border-b border-primary-container/30 px-4 py-5 flex flex-col gap-2 shadow-2xl animate-in slide-in-from-top-3 duration-200">
+            
+            {/* Header in menu */}
+            <div className="flex items-center justify-between pb-2 mb-1 border-b border-outline-variant/60 text-[10px] font-mono text-outline">
+              <span className="text-secondary">// UNIT 09 NAVIGATOR</span>
+              <span className="text-primary font-bold">STATUS: ACTIVE</span>
+            </div>
+
+            {/* Nav list */}
             {navLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -136,23 +181,30 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
                   onClick={() => {
                     soundFx.playKeyClick();
                     setIsMobileOpen(false);
+                    setActiveNav(link.name);
                   }}
-                  className="px-4 py-2.5 rounded bg-surface-container border border-outline-variant text-on-surface hover:text-secondary hover:border-secondary-container font-label-sm font-bold uppercase tracking-wider flex items-center gap-2.5 transition-all"
+                  className="px-3.5 py-2.5 rounded-lg bg-surface-container/80 border border-outline-variant/70 text-on-surface hover:text-secondary hover:border-secondary-container font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-all active:scale-[0.98]"
                 >
-                  <Icon className="w-4 h-4 text-secondary-container" />
-                  <span>{link.name}</span>
+                  <div className="flex items-center gap-2.5">
+                    <Icon className="w-4 h-4 text-secondary-container" />
+                    <span>{link.name}</span>
+                  </div>
+                  <span className="text-[10px] text-outline font-normal lowercase">{link.detail}</span>
                 </a>
               );
             })}
+
+            {/* Mobile Drawer CTA */}
             <button
               onClick={() => {
                 soundFx.playAlarm();
                 setIsMobileOpen(false);
                 onOpenRegisterModal();
               }}
-              className="w-full mt-2 py-3 bg-primary-container text-surface-container-lowest font-label-md font-bold uppercase tracking-wider rounded text-center pulse-glow-crimson"
+              className="w-full mt-2.5 py-3 bg-primary-container text-surface-container-lowest font-mono font-bold text-xs uppercase tracking-wider rounded-lg text-center pulse-glow-crimson flex items-center justify-center gap-2 active:scale-95 transition-transform"
             >
-              REGISTER SQUAD ON UNSTOP
+              <ExternalLink className="w-4 h-4 stroke-[2.5]" />
+              <span>REGISTER SQUAD ON UNSTOP</span>
             </button>
           </div>
         )}
@@ -160,3 +212,4 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
     </>
   );
 };
+

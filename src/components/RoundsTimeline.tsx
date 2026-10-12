@@ -17,26 +17,26 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
     <section className="py-space-xl px-space-md lg:px-margin max-w-7xl mx-auto" id="tournament-architecture">
       
       {/* Header */}
-      <div className="mb-space-lg text-center max-w-3xl mx-auto">
-        <div className="text-label-sm font-label-sm text-secondary uppercase tracking-widest font-mono">
+      <div className="mb-6 sm:mb-space-lg text-center max-w-3xl mx-auto">
+        <div className="text-[10px] sm:text-label-sm font-label-sm text-secondary uppercase tracking-widest font-mono">
           // TOURNAMENT ARCHITECTURE
         </div>
-        <h2 className="text-headline-lg font-headline-lg text-on-surface uppercase mt-1">
+        <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface uppercase mt-1 leading-tight">
           THE TWO-STAGE PROGRESSION
         </h2>
         
-        {/* Progression Pill */}
-        <div className="mt-3.5 inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-surface-container border border-outline-variant text-label-sm font-mono shadow-md">
+        {/* Progression Pill - Wraps smoothly on small mobile */}
+        <div className="mt-3.5 flex flex-wrap sm:inline-flex items-center justify-center gap-1.5 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-xl sm:rounded-full bg-surface-container border border-outline-variant text-[11px] sm:text-label-sm font-mono shadow-md max-w-full">
           <span className="text-secondary flex items-center gap-1.5 font-bold">
-            🕵️ ROUND 1: CASE INVESTIGATION
+            🕵️ ROUND 1: INVESTIGATION
           </span>
           <span className="text-outline-variant font-bold">➔</span>
           <span className="text-primary flex items-center gap-1.5 font-bold">
-            💻 ROUND 2: CTF CHALLENGE
+            💻 ROUND 2: CTF
           </span>
         </div>
 
-        <p className="text-body-md font-body-md text-on-surface-variant mt-3 text-sm">
+        <p className="text-xs sm:text-body-md font-body-md text-on-surface-variant mt-3 text-sm px-2 sm:px-0">
           Qualify through investigative deduction in <strong className="text-secondary font-bold">Round 1</strong>, then execute hands-on cyber warfare in <strong className="text-primary font-bold">Round 2</strong>.
         </p>
       </div>

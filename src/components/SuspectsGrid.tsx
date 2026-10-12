@@ -95,12 +95,12 @@ export const SuspectsGrid: React.FC = () => {
     <section className="py-space-xl px-space-md lg:px-margin max-w-7xl mx-auto border-t border-outline-variant/40" id="suspects-dossier">
       
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-space-lg gap-2 sm:gap-4">
         <div>
-          <div className="text-label-sm font-label-sm text-primary uppercase tracking-widest font-mono">// PERSONS OF INTEREST</div>
-          <h2 className="text-headline-lg font-headline-lg text-on-surface uppercase mt-1">6 PRIMARY SUSPECTS</h2>
+          <div className="text-[10px] sm:text-label-sm font-label-sm text-primary uppercase tracking-widest font-mono">// PERSONS OF INTEREST</div>
+          <h2 className="text-2xl sm:text-headline-lg font-headline-lg text-on-surface uppercase mt-1 leading-tight">6 PRIMARY SUSPECTS</h2>
         </div>
-        <div className="text-label-sm font-label-sm text-outline-variant font-mono">
+        <div className="text-[11px] sm:text-label-sm font-mono text-outline-variant">
           STATUS: CLASSIFIED // INVESTIGATE CLUES IN ROUND 1 TO INFILTRATE IN ROUND 2
         </div>
       </div>
@@ -159,38 +159,38 @@ export const SuspectsGrid: React.FC = () => {
 
       {/* Selected Suspect Modal - Concise High-Level Overview */}
       {selectedSuspect && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-surface-container-low border-2 border-primary-container max-w-xl w-full rounded-xl p-6 sm:p-7 shadow-2xl relative animate-in fade-in zoom-in-95">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4">
+          <div className="bg-surface-container-low border-2 border-primary-container max-w-xl w-full rounded-xl p-4 sm:p-7 shadow-2xl relative animate-in fade-in zoom-in-95 max-h-[90vh] overflow-y-auto">
             <button
               onClick={() => setSelectedSuspect(null)}
-              className="absolute top-5 right-5 p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 p-1.5 rounded bg-surface-container text-on-surface-variant hover:text-on-surface"
             >
               <X className="w-5 h-5" />
             </button>
 
             {/* Top Subtitle */}
-            <div className="flex items-center gap-2 text-label-sm font-label-sm text-primary uppercase mb-3 font-mono">
-              <ShieldAlert className="w-4 h-4 text-primary" />
+            <div className="flex items-center gap-2 text-[11px] sm:text-label-sm font-label-sm text-primary uppercase mb-3 font-mono">
+              <ShieldAlert className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
               <span>CLASSIFIED DOSSIER // SUSPECT #{selectedSuspect.num}</span>
             </div>
 
             {/* Suspect Header with Question Mark Placeholder */}
-            <div className="flex items-center gap-4 mb-4 pb-4 border-b border-outline-variant">
-              <div className="w-20 h-20 rounded-lg bg-surface-container-lowest border-2 border-primary-container flex flex-col items-center justify-center shrink-0 relative overflow-hidden shadow-lg">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 pb-4 border-b border-outline-variant">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg bg-surface-container-lowest border-2 border-primary-container flex flex-col items-center justify-center shrink-0 relative overflow-hidden shadow-lg">
                 <div className="absolute inset-0 bg-primary-container/10"></div>
-                <span className="text-4xl font-mono font-black text-primary select-none">?</span>
-                <span className="text-[8px] font-mono text-outline uppercase tracking-widest font-bold mt-0.5">
+                <span className="text-3xl sm:text-4xl font-mono font-black text-primary select-none">?</span>
+                <span className="text-[7px] sm:text-[8px] font-mono text-outline uppercase tracking-widest font-bold mt-0.5">
                   REDACTED
                 </span>
               </div>
-              <div>
-                <h3 className="text-headline-lg font-headline-lg text-on-surface uppercase leading-tight">
+              <div className="min-w-0">
+                <h3 className="text-xl sm:text-headline-lg font-headline-lg text-on-surface uppercase leading-tight truncate">
                   {selectedSuspect.name}
                 </h3>
-                <div className="text-label-md font-label-md text-secondary font-mono">
+                <div className="text-xs sm:text-label-md font-mono text-secondary truncate">
                   {selectedSuspect.role}
                 </div>
-                <span className={`inline-block mt-1.5 px-2 py-0.5 rounded text-[10px] font-bold border ${selectedSuspect.statusColor}`}>
+                <span className={`inline-block mt-1 sm:mt-1.5 px-2 py-0.5 rounded text-[10px] font-bold border ${selectedSuspect.statusColor}`}>
                   {selectedSuspect.status}
                 </span>
               </div>

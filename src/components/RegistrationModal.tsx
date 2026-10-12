@@ -27,73 +27,73 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[60] flex items-center justify-center p-3.5 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
       
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-xl bg-void-900 border-2 border-crimson rounded-2xl p-6 sm:p-8 shadow-[0_0_50px_rgba(255,26,75,0.4)] overflow-hidden">
+      <div className="relative w-full max-w-xl bg-surface-container-low border-2 border-primary-container rounded-2xl p-5 sm:p-8 shadow-[0_0_50px_rgba(255,81,100,0.35)] overflow-y-auto max-h-[90vh]">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-lg bg-void-800 text-gray-400 hover:text-white hover:bg-void-700 transition-colors"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Header Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-crimson/15 border border-crimson/50 rounded-full text-xs font-mono text-crimson uppercase tracking-wider mb-4">
-          <ShieldCheck className="w-3.5 h-3.5 text-crimson" />
-          <span>OFFICIAL REGISTRATION PORTAL // UNSTOP ENLISTMENT</span>
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 bg-primary-container/15 border border-primary-container/50 rounded-full text-[10px] sm:text-xs font-mono text-primary uppercase tracking-wider mb-3 sm:mb-4 max-w-[85%]">
+          <ShieldCheck className="w-3.5 h-3.5 text-primary shrink-0" />
+          <span className="truncate">OFFICIAL REGISTRATION // UNSTOP ENLISTMENT</span>
         </div>
 
-        <h3 className="text-2xl sm:text-3xl font-black font-headline text-white uppercase mb-2">
-          JOIN OPERATION <span className="text-crimson">ZERO HOUR</span>
+        <h3 className="text-xl sm:text-3xl font-black font-headline text-on-surface uppercase mb-2">
+          JOIN OPERATION <span className="text-primary-container">ZERO HOUR</span>
         </h3>
-        <p className="text-sm text-gray-300 font-body mb-6 leading-relaxed">
-          Official registration and squad management for both Round 1 & Round 2 is hosted securely on Unstop.
+        <p className="text-xs sm:text-sm text-on-surface-variant font-body mb-5 leading-relaxed">
+          Official registration and squad management for both Round 1 &amp; Round 2 is hosted securely on Unstop.
         </p>
 
         {/* Squad Specifications Card */}
-        <div className="p-4 bg-void-950 rounded-xl border border-void-700 mb-6 font-mono text-xs space-y-2.5">
-          <div className="flex items-center justify-between text-gray-300">
-            <span className="text-gray-400 flex items-center gap-2">
-              <Users className="w-3.5 h-3.5 text-cyan" />
+        <div className="p-3.5 sm:p-4 bg-surface-container-lowest rounded-xl border border-outline-variant mb-5 font-mono text-xs space-y-2">
+          <div className="flex items-center justify-between text-on-surface-variant">
+            <span className="flex items-center gap-2">
+              <Users className="w-3.5 h-3.5 text-secondary" />
               SQUAD CAPACITY:
             </span>
-            <span className="text-white font-bold">{EVENT_CONFIG.teamSize}</span>
+            <span className="text-on-surface font-bold">{EVENT_CONFIG.teamSize}</span>
           </div>
-          <div className="flex items-center justify-between text-gray-300">
-            <span className="text-gray-400">QUALIFYING FORMAT:</span>
-            <span className="text-amber font-bold">Round 1 Online → Round 2 Finalist CTF</span>
+          <div className="flex items-center justify-between text-on-surface-variant">
+            <span>QUALIFYING FORMAT:</span>
+            <span className="text-tertiary font-bold text-[11px] sm:text-xs">Round 1 Online → Round 2 CTF</span>
           </div>
-          <div className="flex items-center justify-between text-gray-300">
-            <span className="text-gray-400">REGISTRATION FEE:</span>
-            <span className="text-terminal-green font-bold">FREE REGISTRATION</span>
+          <div className="flex items-center justify-between text-on-surface-variant">
+            <span>REGISTRATION FEE:</span>
+            <span className="text-secondary font-bold">FREE REGISTRATION</span>
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="space-y-3 mb-6">
+        <div className="space-y-2.5 sm:space-y-3 mb-5">
           <button
             onClick={handleProceed}
-            className="w-full py-4 bg-crimson text-black font-mono font-black text-sm uppercase tracking-widest chamfer-md glow-crimson hover:bg-crimson-bright hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-3 cursor-pointer"
+            className="w-full py-3.5 sm:py-4 bg-primary-container text-surface-container-lowest font-mono font-black text-xs sm:text-sm uppercase tracking-wider sm:tracking-widest rounded-lg pulse-glow-crimson hover:bg-primary active:scale-95 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
           >
             <span>PROCEED TO UNSTOP REGISTRATION</span>
-            <ExternalLink className="w-4 h-4 stroke-[3]" />
+            <ExternalLink className="w-4 h-4 stroke-[2.5]" />
           </button>
 
           <button
             onClick={handleCopyLink}
-            className="w-full py-3 bg-void-800 hover:bg-void-700 text-gray-300 border border-void-600 font-mono text-xs uppercase tracking-wider rounded-lg transition-all flex items-center justify-center gap-2"
+            className="w-full py-2.5 sm:py-3 bg-surface-container hover:bg-surface-container-high text-on-surface border border-outline-variant font-mono text-xs uppercase tracking-wider rounded-lg transition-all flex items-center justify-center gap-2 active:scale-95"
           >
             {copied ? (
               <>
-                <Check className="w-4 h-4 text-terminal-green" />
-                <span className="text-terminal-green font-bold">UNSTOP LINK COPIED TO CLIPBOARD!</span>
+                <Check className="w-4 h-4 text-secondary" />
+                <span className="text-secondary font-bold">UNSTOP LINK COPIED TO CLIPBOARD!</span>
               </>
             ) : (
               <>
-                <Copy className="w-4 h-4 text-gray-400" />
+                <Copy className="w-4 h-4 text-outline" />
                 <span>COPY UNSTOP REGISTRATION LINK</span>
               </>
             )}
@@ -101,8 +101,8 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
         </div>
 
         {/* Note on link placeholder */}
-        <div className="p-3 bg-void-950/60 rounded border border-void-800 text-[11px] font-mono text-gray-400 flex items-center gap-2">
-          <AlertTriangle className="w-4 h-4 text-amber shrink-0" />
+        <div className="p-2.5 sm:p-3 bg-surface-container-lowest rounded border border-outline-variant text-[11px] font-mono text-outline-variant flex items-center gap-2">
+          <AlertTriangle className="w-4 h-4 text-tertiary shrink-0" />
           <span>
             Link destination will be updated automatically with your team's live Unstop event URL.
           </span>
@@ -113,3 +113,4 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
     </div>
   );
 };
+
