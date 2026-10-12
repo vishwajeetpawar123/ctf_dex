@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CyberMatrixBackground } from './components/CyberMatrixBackground';
+import { BloodDripEffect } from './components/BloodDripEffect';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { EvidenceBoard } from './components/EvidenceBoard';
@@ -42,6 +43,9 @@ export function App() {
       {/* Background Cyber Canvas & Ambient Scanning Overlays */}
       <CyberMatrixBackground />
       <div className="fixed inset-0 crt-scanlines z-40 pointer-events-none"></div>
+
+      {/* Atmospheric Crime Scene Blood Dripping Effect Along Right Corner & Full Page */}
+      <BloodDripEffect />
 
       {/* Ambient Neon Haze Nodes from Stitch */}
       <div className="fixed top-0 left-1/4 w-96 h-96 rounded-full bg-primary-container/10 blur-[130px] pointer-events-none -z-10"></div>

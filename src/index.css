@@ -82,3 +82,65 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #ff5164;
 }
+
+/* Viscous Blood Dripping Down Whole Page */
+.blood-drop {
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  background: radial-gradient(circle at 35% 30%, #ff5268, #9e0018 65%, #3d0007);
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  box-shadow: 0 0 10px rgba(255, 30, 60, 0.6);
+  opacity: 0;
+  will-change: transform, top, opacity;
+}
+
+.blood-drop-1 {
+  animation: dripFall 5.8s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+  animation-delay: 0.8s;
+}
+
+.blood-drop-2 {
+  width: 5px;
+  height: 8px;
+  animation: dripFall 7.2s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+  animation-delay: 3.6s;
+}
+
+.blood-drop-3 {
+  width: 4px;
+  height: 7px;
+  animation: dripFall 6.4s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+  animation-delay: 2.1s;
+}
+
+.blood-drop-4 {
+  width: 5px;
+  height: 9px;
+  animation: dripFall 8.5s cubic-bezier(0.45, 0, 0.9, 1) infinite;
+  animation-delay: 5.4s;
+}
+
+@keyframes dripFall {
+  0% {
+    top: 200px;
+    opacity: 0;
+    transform: scale(0.6) translateY(0);
+  }
+  4% {
+    opacity: 0.95;
+    transform: scale(1.15) translateY(6px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(24px);
+  }
+  88% {
+    opacity: 0.95;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+    transform: scale(0.85) translateY(0);
+  }
+}

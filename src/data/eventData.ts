@@ -2,14 +2,14 @@ import { Suspect, EvidenceNode } from '../types';
 
 export const EVENT_CONFIG = {
   eventName: "CID CTF: OPERATION ZERO HOUR",
-  tagline: "A Tech Tycoon Murdered at 00:05. ₹47 Crore Laundered. 6 Suspects. The Crime Scene is Encrypted in the RAM.",
+  tagline: "A Tech Tycoon Murdered at 01:05. ₹47 Crore Laundered. 6 Suspects. The Crime Scene is Encrypted in the RAM.",
   caseNumber: "CASE #8849-ZERO-HOUR",
   victim: "Vikram Malhotra (46), Founder of Malhotra Cyber Dynamics",
-  timeOfDeath: "October 14, 00:05 AM IST",
+  timeOfDeath: "October 14, 01:05 AM IST",
   crimeScene: "Penthouse 42, Cyber Heights, Mumbai",
   totalPoints: 4500,
   teamSize: "1 to 4 Detectives",
-  targetDate: "2026-11-15T10:00:00+05:30", // Configurable countdown date
+  targetDate: "2026-10-29T10:00:00+05:30", // Configurable countdown date
   unstopRegistrationUrl: "https://unstop.com/hackathons/cid-ctf-operation-zero-hour-2026", // Will be replaced by user's link
   prizePool: "₹50,000+ Bounty Pool",
   eligibility: "Open to all College Students & Cyber Forensics Enthusiasts across India",

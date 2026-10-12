@@ -33,33 +33,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-surface-container-lowest/85 backdrop-blur-xl border-b border-outline-variant/30 shadow-md">
-        <div className="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto h-16">
+        <div className="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto h-20 sm:h-24">
           
-          {/* Brand Identity - Clean, Sharp, Uncluttered */}
-          <div className="flex items-center gap-3 min-w-0">
+          {/* Brand Identity - Clean, Sharp with 3x Expanded Club Logo */}
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0">
             <a
-              className="flex items-center gap-3 group cursor-pointer min-w-0"
+              className="flex items-center gap-3 sm:gap-4 group cursor-pointer min-w-0"
               href="#hero"
               onClick={() => soundFx.playKeyClick()}
             >
-              {/* Club Logo */}
+              {/* 3x Tripled Club Logo */}
               <img
                 src="/assets/club_logo.jpeg"
                 alt="Club Logo"
-                className="w-8 h-8 rounded-lg object-contain bg-surface-container-low border border-outline-variant/50 p-0.5 shrink-0 group-hover:border-primary-container transition-colors"
+                className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl object-contain bg-surface-container-low border-2 border-outline-variant/60 p-1 shrink-0 shadow-lg shadow-black/70 group-hover:border-primary-container group-hover:scale-105 transition-all duration-300"
                 onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }}
               />
 
               <div className="flex flex-col text-left min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="font-headline font-bold text-sm tracking-wide text-on-surface group-hover:text-primary transition-colors truncate">
+                  <span className="font-headline font-bold text-sm sm:text-base tracking-wide text-on-surface group-hover:text-primary transition-colors truncate">
                     OPERATION <span className="text-primary-container">ZERO HOUR</span>
                   </span>
                   <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-primary-container/15 text-primary border border-primary-container/30">
                     CID CTF
                   </span>
                 </div>
-                <span className="text-[10px] font-mono text-outline-variant tracking-wider hidden sm:inline truncate">
+                <span className="text-[10px] sm:text-xs font-mono text-outline-variant tracking-wider hidden sm:inline truncate">
                   CLASSIFIED HOMICIDE CASE #8849
                 </span>
                 <span className="sm:hidden text-[9px] font-mono text-outline-variant uppercase tracking-widest truncate">
