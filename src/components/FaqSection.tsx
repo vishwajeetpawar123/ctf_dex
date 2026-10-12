@@ -92,7 +92,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
             </div>
 
             <div className="mt-3.5 sm:mt-space-md text-[10px] sm:text-label-sm text-outline-variant font-mono">
-              FREE REGISTRATION // ELIGIBLE FOR ALL COLLEGE STUDENTS &amp; TECH ENTHUSIASTS
+              ₹120 PER TEAM REGISTRATION // 2-4 DETECTIVES // OPEN TO ALL COLLEGE STUDENTS &amp; TECH ENTHUSIASTS
             </div>
           </div>
         </div>

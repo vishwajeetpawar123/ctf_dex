@@ -23,7 +23,7 @@ export const RulesAndPrizes: React.FC<RulesProps> = ({ onOpenRegisterModal }) =>
           </div>
           <h4 className="text-headline-md font-headline-md text-on-surface text-base">Squad Formation</h4>
           <p className="text-body-sm font-body-sm text-on-surface-variant mt-1">
-            1 to 4 Operatives. Cross-college and cross-specialization alliances are fully authorized.
+            2 to 4 Operatives (₹120 / Team). Cross-college and cross-specialization alliances are fully authorized.
           </p>
         </div>
 

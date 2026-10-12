@@ -68,7 +68,7 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
           </div>
           <div className="flex items-center justify-between text-on-surface-variant">
             <span>REGISTRATION FEE:</span>
-            <span className="text-secondary font-bold">FREE REGISTRATION</span>
+            <span className="text-secondary font-bold">₹120 PER TEAM</span>
           </div>
         </div>
 

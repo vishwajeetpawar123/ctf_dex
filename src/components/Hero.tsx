@@ -146,8 +146,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegisterModal }) => {
 
         <div className="p-3 sm:p-4 bg-surface-container-low/80 border border-outline-variant/60 rounded text-left relative overflow-hidden group hover:border-secondary-container transition-colors">
           <div className="text-[10px] sm:text-label-sm font-mono text-outline uppercase tracking-wider mb-1">// SQUAD SIZE</div>
-          <div className="text-lg sm:text-2xl md:text-headline-md font-headline-md text-on-surface tracking-tight">1 - 4 Agents</div>
-          <div className="text-[11px] sm:text-body-sm text-on-surface-variant">Per Squad / Division</div>
+          <div className="text-lg sm:text-2xl md:text-headline-md font-headline-md text-on-surface tracking-tight">2 - 4 Agents</div>
+          <div className="text-[11px] sm:text-body-sm text-on-surface-variant">₹120 Entry Per Squad</div>
         </div>
       </div>
 

@@ -8,10 +8,11 @@ export const EVENT_CONFIG = {
   timeOfDeath: "October 14, 01:05 AM IST",
   crimeScene: "Penthouse 42, Cyber Heights, Mumbai",
   totalPoints: 4500,
-  teamSize: "1 to 4 Detectives",
+  teamSize: "2 to 4 Detectives",
   targetDate: "2026-10-26T23:59:59+05:30", // Registration deadline: Oct 26 night
   unstopRegistrationUrl: "https://unstop.com/o/3On4mht?lb=jWjRT7lp&utm_medium=Share&utm_source=cyberclu31763&utm_campaign=Online_coding_challenge",
   prizePool: "₹15,000 Bounty Pool",
+  registrationFee: "₹120 per team",
   eligibility: "Open to all College Students & Cyber Forensics Enthusiasts across India",
   collegeName: "Department of Computer Science & Engineering",
   clubName: "Cyber Security & CTF Club",
@@ -260,8 +261,8 @@ export const FAQ_ITEMS = [
     answer: "Both rounds are conducted offline. Round 1 is an offline qualifier focusing on analytical aptitude, OSINT, logic puzzles, and clue evaluation. Qualified squads advance to Round 2 for the hands-on forensic exploitation CTF showdown."
   },
   {
-    question: "What is the team size and who is eligible?",
-    answer: "You can participate as a solo detective or enlist a squad of 2 to 4 members. Students from any college or university with an interest in cybersecurity, digital forensics, or investigative problem-solving are welcome."
+    question: "What is the team size, fee, and who is eligible?",
+    answer: "You can enlist a squad of 2 to 4 members with a registration fee of ₹120 per team. Students from any college or university with an interest in cybersecurity, digital forensics, or investigative problem-solving are welcome."
   },
   {
     question: "How do we register on Unstop?",
