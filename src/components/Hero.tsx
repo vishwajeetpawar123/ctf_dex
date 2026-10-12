@@ -40,14 +40,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegisterModal }) => {
       {/* Top Classification Tag */}
       <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 mb-3 sm:mb-space-md bg-surface-container border border-primary-container/40 rounded text-[10px] sm:text-label-sm font-mono text-primary uppercase tracking-wider sm:tracking-widest max-w-full">
         <Lock className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-primary shrink-0" />
-        <span className="truncate">// CASE FILE: 2025-ZERO-HOUR <span className="hidden sm:inline">// TOP SECRET CLEARANCE</span></span>
+        <span className="truncate">// CASE FILE: 2026-GADBAD-HAI-DAYA <span className="hidden sm:inline">// TOP SECRET CLEARANCE</span></span>
       </div>
 
       {/* Main Headline with Forensic Glitch Vibe */}
       <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-headline-xl font-headline-xl uppercase text-on-surface tracking-tight max-w-5xl leading-[1.1] sm:leading-none">
         CID CTF:{" "}
         <span className="text-primary-container underline decoration-secondary-container decoration-wavy decoration-2">
-          OPERATION ZERO HOUR
+          KUCH TOH GADBAD HAI DAYA
         </span>
       </h1>
 

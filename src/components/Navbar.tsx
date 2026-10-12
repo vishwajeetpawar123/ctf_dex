@@ -52,8 +52,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegisterModal }) => {
 
               <div className="flex flex-col text-left min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="font-headline font-bold text-sm sm:text-base tracking-wide text-on-surface group-hover:text-primary transition-colors truncate">
-                    OPERATION <span className="text-primary-container">ZERO HOUR</span>
+                  <span className="font-headline font-bold text-xs sm:text-sm md:text-base tracking-wide text-on-surface group-hover:text-primary transition-colors truncate">
+                    CID: <span className="text-primary-container">KUCH TOH GADBAD HAI DAYA</span>
                   </span>
                   <span className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-primary-container/15 text-primary border border-primary-container/30">
                     CID CTF

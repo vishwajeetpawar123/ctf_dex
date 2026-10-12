@@ -1,9 +1,9 @@
 import { Suspect, EvidenceNode } from '../types';
 
 export const EVENT_CONFIG = {
-  eventName: "CID CTF: OPERATION ZERO HOUR",
+  eventName: "CID CTF: KUCH TOH GADBAD HAI DAYA",
   tagline: "A Tech Tycoon Murdered at 01:05. ₹47 Crore Laundered. 6 Suspects. The Crime Scene is Encrypted in the RAM.",
-  caseNumber: "CASE #8849-ZERO-HOUR",
+  caseNumber: "CASE #8849-GADBAD-HAI-DAYA",
   victim: "Vikram Malhotra (46), Founder of Malhotra Cyber Dynamics",
   timeOfDeath: "October 14, 01:05 AM IST",
   crimeScene: "Penthouse 42, Cyber Heights, Mumbai",
@@ -253,7 +253,7 @@ export const ROUNDS_INFO = [
 
 export const FAQ_ITEMS = [
   {
-    question: "What is CID CTF: Operation Zero Hour?",
+    question: "What is CID CTF: Kuch Toh Gadbad Hai Daya?",
     answer: "It is an immersive narrative-driven Cyber Crime & Murder Mystery Capture The Flag (CTF) tournament. Unlike conventional CTFs, every challenge represents actual forensic evidence from a tech tycoon's homicide case."
   },
   {

@@ -46,8 +46,8 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
           <span className="truncate">OFFICIAL REGISTRATION // UNSTOP ENLISTMENT</span>
         </div>
 
-        <h3 className="text-xl sm:text-3xl font-black font-headline text-on-surface uppercase mb-2">
-          JOIN OPERATION <span className="text-primary-container">ZERO HOUR</span>
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-black font-headline text-on-surface uppercase mb-2">
+          JOIN <span className="text-primary-container">KUCH TOH GADBAD HAI DAYA</span>
         </h3>
         <p className="text-xs sm:text-sm text-on-surface-variant font-body mb-5 leading-relaxed">
           Official registration and squad management for both Round 1 &amp; Round 2 is hosted securely on Unstop.
