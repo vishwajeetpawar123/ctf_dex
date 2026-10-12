@@ -38,7 +38,7 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterMod
     setInputVal('');
 
     const newEntries: Array<{ text: string; color?: string }> = [
-      { text: `investigator@zerohour:~$ ${inputVal}`, color: "text-secondary-container" }
+      { text: `investigator@msoc-cid:~$ ${inputVal}`, color: "text-secondary-container" }
     ];
 
     switch (cmd) {
@@ -55,8 +55,9 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterMod
         break;
       case 'suspects':
         newEntries.push(
-          { text: "1. Riya Sharma (78%) | 2. Arjun Kapoor (94%) | 3. Meera Desai (72%)", color: "text-on-surface" },
-          { text: "4. Karan Singh (85%) | 5. Devraj Patel (88%) | 6. Commissioner Rao (91%)", color: "text-primary" }
+          { text: "[!] SUSPECT DOSSIERS ENCRYPTED // EXPOSING OCT 26", color: "text-primary font-bold" },
+          { text: "1. ??? (CLASSIFIED) | 2. ??? (CLASSIFIED) | 3. ??? (CLASSIFIED)", color: "text-outline-variant" },
+          { text: "4. ??? (CLASSIFIED) | 5. ??? (CLASSIFIED) | 6. ??? (CLASSIFIED)", color: "text-outline-variant" }
         );
         break;
       case 'decrypt':

@@ -19,10 +19,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRegisterModal }) => {
         {/* Unit Brand Identity */}
         <div className="flex flex-col items-center md:items-start">
           <span className="text-xs sm:text-label-md font-mono font-bold tracking-widest text-primary-container">
-            CID CYBER FORENSICS // KUCH TOH GADBAD HAI DAYA
+            HOSTED BY MSOC // KUCH TOH GADBAD HAI DAYA
           </span>
           <p className="text-[11px] sm:text-body-sm text-outline-variant mt-1 text-center md:text-left max-w-md font-mono">
-            © {new Date().getFullYear()} CID CYBER FORENSICS UNIT // KUCH TOH GADBAD HAI DAYA CTF. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} MSOC. ALL RIGHTS RESERVED.
           </p>
         </div>
 

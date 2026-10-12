@@ -15,7 +15,7 @@ export const EVENT_CONFIG = {
   registrationFee: "₹120 per team",
   eligibility: "Open to all College Students & Cyber Forensics Enthusiasts across India",
   collegeName: "Department of Computer Science & Engineering",
-  clubName: "Cyber Security & CTF Club",
+  clubName: "MSOC",
   contactEmail: "cidctf.support@domain.edu",
 };
 
