@@ -140,7 +140,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegisterModal }) => {
 
         <div className="p-3 sm:p-4 bg-surface-container-low/80 border border-outline-variant/60 rounded text-left relative overflow-hidden group hover:border-tertiary transition-colors">
           <div className="text-[10px] sm:text-label-sm font-mono text-outline uppercase tracking-wider mb-1">// REWARD MATRIX</div>
-          <div className="text-lg sm:text-2xl md:text-headline-md font-headline-md text-tertiary tracking-tight">₹50,000+</div>
+          <div className="text-lg sm:text-2xl md:text-headline-md font-headline-md text-tertiary tracking-tight">₹15,000</div>
           <div className="text-[11px] sm:text-body-sm text-on-surface-variant">Cash &amp; Bounty Pool</div>
         </div>
 

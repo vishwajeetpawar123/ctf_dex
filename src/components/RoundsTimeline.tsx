@@ -200,7 +200,7 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
 
           {/* Footer Trigger */}
           <div className="mt-space-md pt-3.5 border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm">
-            <span className="text-outline font-mono text-xs">₹50,000+ BOUNTY POOL</span>
+            <span className="text-outline font-mono text-xs">₹15,000 BOUNTY POOL</span>
             <button
               onClick={() => {
                 soundFx.playAlarm();

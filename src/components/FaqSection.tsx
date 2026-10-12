@@ -18,11 +18,11 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
     },
     {
       q: "What are the tournament rewards, certificates, and bounties?",
-      a: "The top 3 investigative squads share ₹50,000+ in cash bounties, with verified National CID Forensics certificates of excellence. Top performers also receive direct fast-track interviews with sponsor cybersecurity agencies."
+      a: "The top investigative squads share ₹15,000 in cash bounties, with verified National CID Forensics certificates of excellence. Top performers also receive direct fast-track opportunities."
     },
     {
-      q: "Is Round 2 conducted online or in-person?",
-      a: "Both phases are completely virtual and cloud-hosted. Round 2 provides remote VPN tunnel access to the simulated Penthouse 42 private network infrastructure."
+      q: "Is the tournament conducted online or offline?",
+      a: "Both Round 1 and Round 2 are conducted offline in-person at the venue. Squads will investigate the physical crime dossier in Round 1 and execute the technical CTF mainframe attack in Round 2."
     }
   ];
 

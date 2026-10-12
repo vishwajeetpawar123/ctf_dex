@@ -64,7 +64,7 @@ export const RegistrationModal: React.FC<RegisterModalProps> = ({ isOpen, onClos
           </div>
           <div className="flex items-center justify-between text-on-surface-variant">
             <span>QUALIFYING FORMAT:</span>
-            <span className="text-tertiary font-bold text-[11px] sm:text-xs">Round 1 Online → Round 2 CTF</span>
+            <span className="text-tertiary font-bold text-[11px] sm:text-xs">Both Rounds Offline (In-Person)</span>
           </div>
           <div className="flex items-center justify-between text-on-surface-variant">
             <span>REGISTRATION FEE:</span>

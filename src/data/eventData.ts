@@ -9,9 +9,9 @@ export const EVENT_CONFIG = {
   crimeScene: "Penthouse 42, Cyber Heights, Mumbai",
   totalPoints: 4500,
   teamSize: "1 to 4 Detectives",
-  targetDate: "2026-10-29T10:00:00+05:30", // Configurable countdown date
-  unstopRegistrationUrl: "https://unstop.com/hackathons/cid-ctf-operation-zero-hour-2026", // Will be replaced by user's link
-  prizePool: "₹50,000+ Bounty Pool",
+  targetDate: "2026-10-26T23:59:59+05:30", // Registration deadline: Oct 26 night
+  unstopRegistrationUrl: "https://unstop.com/o/3On4mht?lb=jWjRT7lp&utm_medium=Share&utm_source=cyberclu31763&utm_campaign=Online_coding_challenge",
+  prizePool: "₹15,000 Bounty Pool",
   eligibility: "Open to all College Students & Cyber Forensics Enthusiasts across India",
   collegeName: "Department of Computer Science & Engineering",
   clubName: "Cyber Security & CTF Club",
@@ -257,7 +257,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What are the requirements for Round 1 vs Round 2?",
-    answer: "Round 1 is a rapid online qualifier focusing on analytical aptitude, OSINT, logic puzzles, and beginner-to-intermediate cipher cracking. The top squads qualify for Round 2, where the full 4,500-point forensic exploitation playground unlocks."
+    answer: "Both rounds are conducted offline. Round 1 is an offline qualifier focusing on analytical aptitude, OSINT, logic puzzles, and clue evaluation. Qualified squads advance to Round 2 for the hands-on forensic exploitation CTF showdown."
   },
   {
     question: "What is the team size and who is eligible?",
