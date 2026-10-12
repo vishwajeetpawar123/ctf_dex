@@ -16,10 +16,17 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterMod
     { text: "[!] 6 Suspicious hidden processes detected: [pid: 4108 'inject_svchost.exe']", color: "text-primary" },
     { text: "[+] Artifacts unlocked: 5 Capture The Flag tokens mapped to suspect dossiers.", color: "text-on-surface" },
   ]);
-  const bottomRef = useRef<HTMLDivElement | null>(null);
+  const bufferRef = useRef<HTMLDivElement | null>(null);
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (bufferRef.current) {
+      bufferRef.current.scrollTop = bufferRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (e: React.FormEvent) => {
@@ -99,13 +106,12 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterMod
       </div>
 
       {/* Screen Buffer from Stitch */}
-      <div className="p-space-md font-mono text-label-md space-y-2 min-h-[220px] max-h-[380px] overflow-y-auto">
+      <div ref={bufferRef} className="p-space-md font-mono text-label-md space-y-2 min-h-[220px] max-h-[380px] overflow-y-auto">
         {history.map((line, idx) => (
           <p key={idx} className={line.color || "text-on-surface"}>
             {line.text}
           </p>
         ))}
-        <div ref={bottomRef} />
       </div>
 
       {/* Prompt Form */}

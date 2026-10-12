@@ -19,6 +19,12 @@ export function App() {
   const [showStickyBottom, setShowStickyBottom] = useState(false);
 
   useEffect(() => {
+    // Ensure fresh page load starts at the top
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     const handleScroll = () => {
       if (window.scrollY > 400) {
         setShowStickyBottom(true);
