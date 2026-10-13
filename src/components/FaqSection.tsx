@@ -10,7 +10,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
   const faqs = [
     {
       q: "Do I need prior digital forensics or CTF experience?",
-      a: "No. Round 1 is an open-source intelligence (OSINT) qualifier where teams investigate famous real-life cases (such as Sushant Singh Rajput or Princess Diana) using Google, Wikipedia, and public archives to write a 10-point conclusion. Top scorers advance to the hands-on Round 2 CTF."
+      a: "No. Round 1 is an open-source intelligence (OSINT) qualifier where teams investigate famous real-life cases using Google, Wikipedia, and public archives to write a 10-point conclusion. Top scorers advance to the hands-on Round 2 CTF."
     },
     {
       q: "How do we register and verify our squad on Unstop?",
@@ -28,7 +28,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
 
   return (
     <div className="py-space-xl px-space-md lg:px-margin max-w-7xl mx-auto" id="faq-section">
-      
+
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto mb-10 sm:mb-space-xl">
         <div className="text-center mb-6 sm:mb-space-md">
@@ -55,7 +55,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
       <section className="my-6 sm:my-space-lg" id="register">
         <div className="bg-gradient-to-b from-surface-container to-surface-container-low border-2 border-primary-container rounded-2xl p-4 sm:p-space-lg md:p-space-xl text-center relative overflow-hidden pulse-glow-crimson">
           <div className="absolute inset-0 crt-grid opacity-20 pointer-events-none"></div>
-          
+
           <div className="relative z-10 max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 mb-3 sm:mb-space-sm bg-surface-container-lowest border border-primary-container text-[10px] sm:text-label-sm font-mono text-primary uppercase max-w-full">
               <AlertOctagon className="w-3.5 h-3.5 text-primary shrink-0" />

@@ -218,9 +218,9 @@ export const ROUNDS_INFO = [
     progression: "🌐 Phase 1: Real-Life OSINT Investigation",
     skills: ["OSINT", "Critical Thinking", "Evidence Reconnaissance", "Logical Deduction"],
     flow: ["Real Case File", "OSINT Recon", "Uncover Evidence", "10-Point Conclusion", "Rubric Evaluation", "CTF Qualification"],
-    description: "Marketed as an intensive OSINT investigation. Teams receive high-profile, publicly available real-world mystery case files (e.g. the death of Sushant Singh Rajput or Princess Diana). Utilizing Google, Wikipedia, public digital archives, and web intelligence, squads uncover evidence, formulate their own conspiracy theory/investigative hypothesis, and deliver a 10-point conclusion cross-verified against benchmark rubrics and pre-written expert conclusions.",
+    description: "Marketed as an intensive OSINT investigation. Teams receive high-profile, publicly available real-world mystery case files. Utilizing Google, Wikipedia, public digital archives, and web intelligence, squads uncover evidence, formulate their own conspiracy theory/investigative hypothesis, and deliver a 10-point conclusion cross-verified against benchmark rubrics and pre-written expert conclusions.",
     highlights: [
-      "Real-world case files provided (e.g. Sushant Singh Rajput, Princess Diana)",
+      "Real-world case files provided",
       "Leverage open-source intelligence (Google, Wikipedia, public records, media archives)",
       "Formulate a forensic conspiracy theory with supporting evidence",
       "Draft a structured 10-Point Conclusion detailing core findings & timeline contradictions",
@@ -260,7 +260,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What are the requirements for Round 1 vs Round 2?",
-    answer: "Both rounds are conducted offline. Round 1 is an OSINT open-source intelligence qualifier where teams investigate famous real-life cases (such as Sushant Singh Rajput or Princess Diana) using Google, Wikipedia, and public records, submitting a 10-point conclusion evaluated against benchmark rubrics. Top-scoring teams advance to Round 2 for the hands-on forensic exploitation CTF showdown."
+    answer: "Both rounds are conducted offline. Round 1 is an OSINT open-source intelligence qualifier where teams investigate famous real-life cases using Google, Wikipedia, and public records, submitting a 10-point conclusion evaluated against benchmark rubrics. Top-scoring teams advance to Round 2 for the hands-on forensic exploitation CTF showdown."
   },
   {
     question: "What is the team size, fee, and who is eligible?",

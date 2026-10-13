@@ -2,7 +2,7 @@
 Skills: Open Source Intelligence (OSINT) • Digital Footprinting • Critical Thinking • Investigative Deduction • Fact Verification
 
 Overview:
-Round 1 is marketed and executed as an intensive OSINT (Open Source Intelligence) Qualifier Round. Teams are issued real-life, famous, and publicly available high-profile mystery case files (e.g., The Mysterious Death of Sushant Singh Rajput, The Death of Princess Diana, or other iconic declassified/unresolved cases).
+Round 1 is marketed and executed as an intensive OSINT (Open Source Intelligence) Qualifier Round. Teams are issued real-life, famous, and publicly available high-profile mystery case files, or other iconic declassified/unresolved cases).
 
 The Mission:
 1. Deep-Dive OSINT Reconnaissance:

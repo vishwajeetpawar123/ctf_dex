@@ -72,7 +72,7 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
                 "Famous Cases. Open Intelligence. 10-Point Deduction."
               </p>
               <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
-                Investigate famous, publicly documented real-world case files (e.g. <span className="text-secondary font-semibold">Death of Sushant Singh Rajput</span> or <span className="text-secondary font-semibold">Princess Diana</span>). Scour Google, Wikipedia, media logs &amp; public records to form your theory and submit a <strong>10-point conclusion</strong> cross-verified against benchmark rubrics. Top scorers advance to the CTF!
+                Investigate famous, publicly documented real-world case files. Scour Google, Wikipedia, media logs &amp; public records to form your theory and submit a <strong>10-point conclusion</strong> cross-verified against benchmark rubrics. Top scorers advance to the CTF!
               </p>
             </div>
 
