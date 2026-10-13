@@ -7,8 +7,8 @@ interface RoundsTimelineProps {
 }
 
 export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterModal }) => {
-  const round1Skills = ["Critical Thinking", "OSINT", "Problem Solving", "Logical Reasoning"];
-  const round1Flow = ["Case", "Investigate", "Analyze Clues", "Build Theory", "Score", "Shortlist"];
+  const round1Skills = ["OSINT", "Critical Thinking", "Google Dorking", "Wikipedia Deep-Dive", "Timeline Verification"];
+  const round1Flow = ["Real Case File", "OSINT Recon", "Uncover Clues", "10-Pt Conclusion", "Rubric Scoring", "Advance to CTF"];
 
   const round2Skills = ["Digital Forensics", "Cryptography", "Web Security", "Reverse Engineering"];
   const round2Flow = ["Infiltrate Systems", "Exploit Clues", "Capture Flags", "Unmask Culprit"];
@@ -28,16 +28,16 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
         {/* Progression Pill - Wraps smoothly on small mobile */}
         <div className="mt-3.5 flex flex-wrap sm:inline-flex items-center justify-center gap-1.5 sm:gap-3 px-3 sm:px-4 py-1.5 rounded-xl sm:rounded-full bg-surface-container border border-outline-variant text-[11px] sm:text-label-sm font-mono shadow-md max-w-full">
           <span className="text-secondary flex items-center gap-1.5 font-bold">
-            🕵️ ROUND 1: INVESTIGATION
+            🌐 ROUND 1: OSINT QUALIFIER
           </span>
           <span className="text-outline-variant font-bold">➔</span>
           <span className="text-primary flex items-center gap-1.5 font-bold">
-            💻 ROUND 2: CTF
+            💻 ROUND 2: CYBER CRIME CTF
           </span>
         </div>
 
         <p className="text-xs sm:text-body-md font-body-md text-on-surface-variant mt-3 text-sm px-2 sm:px-0">
-          Qualify through investigative deduction in <strong className="text-secondary font-bold">Round 1</strong>, then execute hands-on cyber warfare in <strong className="text-primary font-bold">Round 2</strong>.
+          Solve real-world mystery case files through open-source intelligence in <strong className="text-secondary font-bold">Round 1 (OSINT)</strong> to earn entry into the flagship <strong className="text-primary font-bold">Round 2 (CTF Mainframe)</strong>.
         </p>
       </div>
 
@@ -47,7 +47,7 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
         {/* ROUND 1 CARD (round_1.txt) */}
         <div className="bg-surface-container-low border border-outline-variant rounded-xl p-space-md sm:p-space-lg flex flex-col justify-between relative overflow-hidden group hover:border-secondary-container transition-all">
           <div className="absolute top-0 right-0 bg-secondary-container/10 border-b border-l border-secondary-container px-3 py-1 text-label-sm font-label-sm text-secondary uppercase font-bold font-mono">
-            PHASE 01 // QUALIFIER
+            PHASE 01 // OSINT QUALIFIER
           </div>
 
           <div>
@@ -58,10 +58,10 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
               </div>
               <div>
                 <div className="text-label-sm font-label-sm text-secondary uppercase font-mono text-xs">
-                  ROUND 1 — THE CASE FILE
+                  ROUND 1 — THE OSINT INVESTIGATION
                 </div>
                 <h3 className="text-headline-md font-headline-md text-on-surface leading-tight text-xl">
-                  CASE INVESTIGATION
+                  REAL-LIFE CASE FILES (OSINT)
                 </h3>
               </div>
             </div>
@@ -69,17 +69,17 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
             {/* Poster Tagline */}
             <div className="p-3 bg-surface-container-lowest rounded-lg border border-secondary-container/30 my-space-md">
               <p className="text-sm font-mono text-secondary-fixed font-bold leading-snug">
-                "Investigate. Connect the clues. Uncover the motive."
+                "Famous Cases. Open Intelligence. 10-Point Deduction."
               </p>
-              <p className="text-xs text-on-surface-variant mt-1">
-                Analyze evidence, suspects &amp; timelines and build your theory. Highest-scoring teams advance to Round 2: CTF.
+              <p className="text-xs text-on-surface-variant mt-1.5 leading-relaxed">
+                Investigate famous, publicly documented real-world case files (e.g. <span className="text-secondary font-semibold">Death of Sushant Singh Rajput</span> or <span className="text-secondary font-semibold">Princess Diana</span>). Scour Google, Wikipedia, media logs &amp; public records to form your theory and submit a <strong>10-point conclusion</strong> cross-verified against benchmark rubrics. Top scorers advance to the CTF!
               </p>
             </div>
 
             {/* Evaluated Skills */}
             <div className="mb-4">
               <span className="text-[11px] font-mono text-outline block uppercase tracking-wider mb-2">
-                Core Evaluated Skills:
+                Core OSINT Skills:
               </span>
               <div className="flex flex-wrap gap-1.5">
                 {round1Skills.map((skill) => (
@@ -90,6 +90,26 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
                     • {skill}
                   </span>
                 ))}
+              </div>
+            </div>
+
+            {/* Highlights bullets */}
+            <div className="mb-4 p-3 bg-surface-container-lowest/60 rounded border border-outline-variant/60 text-xs text-on-surface-variant space-y-1.5 font-mono">
+              <div className="flex items-start gap-2">
+                <span className="text-secondary font-bold">📁</span>
+                <span><strong className="text-on-surface">Real-Life Cases:</strong> Publicly available famous case dossiers provided.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-secondary font-bold">📝</span>
+                <span><strong className="text-on-surface">10-Point Conclusion:</strong> Submit a 10-point forensic synthesis of findings &amp; theory.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-secondary font-bold">⚖️</span>
+                <span><strong className="text-on-surface">Rubric Verification:</strong> Evaluated &amp; cross-verified against benchmark conclusions.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-secondary font-bold">🎯</span>
+                <span><strong className="text-on-surface">CTF Progression:</strong> Highest scoring teams advance directly to Round 2 CTF.</span>
               </div>
             </div>
 
@@ -115,7 +135,7 @@ export const RoundsTimeline: React.FC<RoundsTimelineProps> = ({ onOpenRegisterMo
 
           {/* Footer Trigger */}
           <div className="mt-space-md pt-3.5 border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm">
-            <span className="text-outline font-mono text-xs">STAGE: OPEN QUALIFIER</span>
+            <span className="text-outline font-mono text-xs">STAGE: OSINT QUALIFIER</span>
             <button
               onClick={() => {
                 soundFx.playAlarm();

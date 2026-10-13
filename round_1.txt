@@ -1,19 +1,36 @@
-🔎 ROUND 1 — THE CASE FILE
-Skills: Critical Thinking • OSINT • Problem Solving • Logical Reasoning
+🌐 ROUND 1 — THE OSINT INVESTIGATION (REAL-LIFE CASE FILES)
+Skills: Open Source Intelligence (OSINT) • Digital Footprinting • Critical Thinking • Investigative Deduction • Fact Verification
 
-Teams will be given different mystery cases to investigate. They must analyze the available clues, connect evidence, identify possible motives, suspects, timelines, contradictions, and build their own conclusion/conspiracy theory.
+Overview:
+Round 1 is marketed and executed as an intensive OSINT (Open Source Intelligence) Qualifier Round. Teams are issued real-life, famous, and publicly available high-profile mystery case files (e.g., The Mysterious Death of Sushant Singh Rajput, The Death of Princess Diana, or other iconic declassified/unresolved cases).
 
-Their conclusions will be evaluated using predefined case-solving metrics. Teams earning the highest scores will be shortlisted for Round 2 — the CTF.
+The Mission:
+1. Deep-Dive OSINT Reconnaissance:
+   Teams must leverage the open web — including Google dorking, Wikipedia archives, news repositories, autopsy/police report leaks, flight paths, social footprints, and public statements.
+2. Formulate a Conspiracy Theory / Investigative Thesis:
+   Connect overlooked dots, uncover timeline discrepancies, cross-reference alibis, and construct a compelling, evidence-backed conspiracy theory or forensic hypothesis.
+3. 10-Point Conclusion Report:
+   Each team must submit a structured, 10-point investigative conclusion summarizing their core findings, key evidence links, timeline anomalies, and final deduction.
 
-Round 1 flow:
-Case → Investigate → Analyze Clues → Build Theory → Score → Shortlist
+Evaluation & Scoring Rubric:
+- Conclusions will be evaluated against strict multi-tier rubrics and cross-verified against expert pre-written case benchmarks and verified factual timelines.
+- Points are awarded for:
+  • Depth & authenticity of OSINT evidence uncovered (Primary Sources vs. Rumors)
+  • Timeline consistency & contradiction identification
+  • Quality, clarity, and logical rigor of the 10-Point Conclusion
+  • Plausibility & forensic depth of the formulated theory
+
+Progression to Grand Finale:
+The highest-scoring investigative teams will qualify and advance to Round 2 — the real hands-on Cyber Crime & Digital Forensics CTF Challenge (Operation Nightfall).
+
+Round 1 Flow:
+Famous Real-Life Case File ➔ OSINT Deep-Dive (Google/Wiki/Archives) ➔ Evidence & Contradiction Mapping ➔ 10-Point Conclusion Submission ➔ Rubric Cross-Verification ➔ CTF Grand Finale Qualification
 
 Summary:
-ROUND 1 — THE CASE FILE
-Investigate. Connect the clues. Uncover the motive.
-Analyze evidence, suspects & timelines and build your theory.
-Highest-scoring teams advance to Round 2: CTF.  
-Skills: Critical Thinking | OSINT | Problem Solving | Logical Reasoning
+ROUND 1 — THE OSINT CASE FILES
+Investigate real-world unsolved mysteries. Mine public intelligence. Build your 10-point deduction.
+Cross-verified via benchmark rubrics. Top squads advance to the Round 2 Hands-on CTF.
+Skills: OSINT | Public Record Reconnaissance | Critical Thinking | Timeline Reconstruction
 
 Event Progression:
-🕵️ Case Investigation → 💻 CTF Challenge
+🌐 Phase 1: Real-Life OSINT Investigation ➔ 💻 Phase 2: Cyber Crime Mainframe CTF

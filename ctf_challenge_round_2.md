@@ -262,7 +262,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     A["📦 You receive:\n• tracker (ELF binary\n  from Karan's USB)"] --> B["🔍 What you do:\n1. Run 'strings tracker' or\n   open in Ghidra\n2. Find hardcoded:\n   IP: ctf-server:8443\n   Token: 'ksingh_auth_x7f2'\n3. curl -H 'Auth: ksingh_auth_x7f2'\n   https://ctf-server:8443/logs\n4. Server returns GPS JSON"]
-    B --> C["📍 GPS Movement Log:\n\n21:30 — Left Malhotra residence\n21:47 — Arrived Flat 402,\n         Cyber Heights (DEVRAJ)\n22:15 — Left Flat 402\n23:40 — Returned Malhotra residence\n23:47 — CCTV system disabled\n00:05 — 💀 Vikram's TOD\n\nResident of Flat 402:\nDEVRAJ PATEL"]
+    B --> C["📍 GPS Movement Log:\n\n21:30 — Left Malhotra residence\n21:47 — Arrived Flat 402,\n         Cyber Heights (DEVRAJ)\n22:15 — Left Flat 402\n23:40 — Returned Malhotra residence\n23:47 — CCTV system disabled\n01:09 PM — 💀 Vikram's TOD\n\nResident of Flat 402:\nDEVRAJ PATEL"]
 ```
 
 **Flag:** `CID{b0dygu4rd_g0n3_r0gu3}`
@@ -387,7 +387,7 @@ flowchart LR
 ```mermaid
 flowchart LR
     A["🌐 From Rao's files:\n• URL to CID internal portal\n  ctf-server/cid-portal"] --> B["🔍 What you do:\n1. Register an account on portal\n2. Login → your profile page:\n   /profile?id=1337\n3. Try IDOR: /profile?id=1\n   → Commissioner Rao's profile!\n4. See 'Documents' tab\n5. Click download on\n   'operation_nightfall.pdf'\n   → Error: invalid token\n6. View page source →\n   find hidden form field\n   with TOTP token logic\n7. Read the JavaScript:\n   secret is in the JS source\n8. Generate valid TOTP token\n9. Submit form → download PDF"]
-    B --> C["📋 operation_nightfall.pdf:\n\nFull murder plan:\n• Oct 13 21:00 — Karan meets Devraj\n• Oct 14 23:47 — CCTV kill switch\n• Oct 14 00:05 — Karan enters penthouse\n• Oct 14 00:12 — Vikram eliminated\n• Oct 14 00:30 — USB drive extracted\n• Payments: Meera ₹20L, Karan ₹20L,\n  Devraj ₹8L, Rao ₹2Cr"]
+    B --> C["📋 operation_nightfall.pdf:\n\nFull murder plan:\n• Oct 13 21:00 — Karan meets Devraj\n• Oct 14 12:47 PM — CCTV kill switch\n• Oct 14 01:00 PM — Karan enters penthouse\n• Oct 14 01:09 PM — Vikram eliminated\n• Oct 14 01:25 PM — USB drive extracted\n• Payments: Meera ₹20L, Karan ₹20L,\n  Devraj ₹8L, Rao ₹2Cr"]
 ```
 
 **Flag:** `CID{m0l3_n3tw0rk_3xp0s3d}`

@@ -10,7 +10,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
   const faqs = [
     {
       q: "Do I need prior digital forensics or CTF experience?",
-      a: "No. Round 1 features beginner-friendly OSINT, logical deductions, and fundamental cryptographic ciphers. We provide comprehensive field handbooks and starter commands so motivated investigators can learn on the fly."
+      a: "No. Round 1 is an open-source intelligence (OSINT) qualifier where teams investigate famous real-life cases (such as Sushant Singh Rajput or Princess Diana) using Google, Wikipedia, and public archives to write a 10-point conclusion. Top scorers advance to the hands-on Round 2 CTF."
     },
     {
       q: "How do we register and verify our squad on Unstop?",
@@ -22,7 +22,7 @@ export const FaqSection: React.FC<FaqProps> = ({ onOpenRegisterModal }) => {
     },
     {
       q: "Is the tournament conducted online or offline?",
-      a: "Both Round 1 and Round 2 are conducted offline in-person at the venue. Squads will investigate the physical crime dossier in Round 1 and execute the technical CTF mainframe attack in Round 2."
+      a: "Both Round 1 and Round 2 are conducted offline in-person at the venue. Squads investigate the real-life OSINT case files in Round 1 and execute the technical CTF mainframe attack in Round 2."
     }
   ];
 

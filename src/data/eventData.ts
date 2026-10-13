@@ -2,10 +2,10 @@ import { Suspect, EvidenceNode } from '../types';
 
 export const EVENT_CONFIG = {
   eventName: "CID CTF: KUCH TOH GADBAD HAI DAYA",
-  tagline: "A Tech Tycoon Murdered at 01:05. ₹47 Crore Laundered. 6 Suspects. The Crime Scene is Encrypted in the RAM.",
+  tagline: "A Tech Tycoon Murdered at 01:09 PM. ₹47 Crore Laundered. 6 Suspects. The Crime Scene is Encrypted in the RAM.",
   caseNumber: "CASE #8849-GADBAD-HAI-DAYA",
   victim: "Vikram Malhotra (46), Founder of Malhotra Cyber Dynamics",
-  timeOfDeath: "October 14, 01:05 AM IST",
+  timeOfDeath: "October 14, 01:09 PM IST",
   crimeScene: "Penthouse 42, Cyber Heights, Mumbai",
   totalPoints: 4500,
   teamSize: "2 to 4 Detectives",
@@ -146,7 +146,7 @@ export const EVIDENCE_NODES: EvidenceNode[] = [
     image: "/assets/vikram_face_crosses.jpeg",
     suspectRef: "Victim (Vikram Malhotra)",
     description: "Found collapsed in Penthouse 42 private study. Smart locks overridden at 23:47.",
-    timestamp: "Oct 14 // 00:05 IST",
+    timestamp: "Oct 14 // 01:09 PM IST",
     tag: "PRIMARY HOMICIDE"
   },
   {
@@ -211,21 +211,23 @@ export const EVIDENCE_NODES: EvidenceNode[] = [
 export const ROUNDS_INFO = [
   {
     roundNumber: "01",
-    title: "ROUND 1 — THE CASE FILE",
-    subtitle: "Investigate. Connect the clues. Uncover the motive.",
-    mode: "Case Investigation / Theory Evaluation",
+    title: "ROUND 1 — THE OSINT INVESTIGATION",
+    subtitle: "Real-life case files. Open web intelligence. 10-point conclusion.",
+    mode: "OSINT Mystery Investigation & Theory Evaluation",
     duration: "Qualifier Round",
-    progression: "🕵️ Phase 1: Case Investigation",
-    skills: ["Critical Thinking", "OSINT", "Problem Solving", "Logical Reasoning"],
-    flow: ["Case", "Investigate", "Analyze Clues", "Build Theory", "Score", "Shortlist"],
-    description: "Teams are given different mystery cases to investigate. They must analyze the available clues, connect evidence, identify possible motives, suspects, timelines, and contradictions, and construct their own conclusion and conspiracy theory evaluated against predefined case-solving metrics.",
+    progression: "🌐 Phase 1: Real-Life OSINT Investigation",
+    skills: ["OSINT", "Critical Thinking", "Evidence Reconnaissance", "Logical Deduction"],
+    flow: ["Real Case File", "OSINT Recon", "Uncover Evidence", "10-Point Conclusion", "Rubric Evaluation", "CTF Qualification"],
+    description: "Marketed as an intensive OSINT investigation. Teams receive high-profile, publicly available real-world mystery case files (e.g. the death of Sushant Singh Rajput or Princess Diana). Utilizing Google, Wikipedia, public digital archives, and web intelligence, squads uncover evidence, formulate their own conspiracy theory/investigative hypothesis, and deliver a 10-point conclusion cross-verified against benchmark rubrics and pre-written expert conclusions.",
     highlights: [
-      "Investigate multi-layered physical and digital clue dossiers",
-      "Analyze evidence, suspects, contradictions & movement timelines",
-      "Construct a structured conclusion & conspiracy theory submission",
-      "Highest-scoring teams shortlisted for Round 2 — the CTF"
+      "Real-world case files provided (e.g. Sushant Singh Rajput, Princess Diana)",
+      "Leverage open-source intelligence (Google, Wikipedia, public records, media archives)",
+      "Formulate a forensic conspiracy theory with supporting evidence",
+      "Draft a structured 10-Point Conclusion detailing core findings & timeline contradictions",
+      "Scored via evaluation rubrics & cross-verified against benchmark conclusions",
+      "Highest-scoring teams qualify for Round 2 — the hands-on Cyber Crime CTF"
     ],
-    statusBadge: "THE CASE FILE",
+    statusBadge: "THE OSINT DOSSIER",
     accentColor: "cyan"
   },
   {
@@ -254,15 +256,15 @@ export const ROUNDS_INFO = [
 export const FAQ_ITEMS = [
   {
     question: "What is CID CTF: Kuch Toh Gadbad Hai Daya?",
-    answer: "It is an immersive narrative-driven Cyber Crime & Murder Mystery Capture The Flag (CTF) tournament. Unlike conventional CTFs, every challenge represents actual forensic evidence from a tech tycoon's homicide case."
+    answer: "It is an immersive narrative-driven Cyber Crime & Murder Mystery Capture The Flag (CTF) tournament. Unlike conventional CTFs, Round 1 challenges your real-world OSINT investigative skills, while Round 2 puts you directly inside the crime scene mainframe."
   },
   {
     question: "What are the requirements for Round 1 vs Round 2?",
-    answer: "Both rounds are conducted offline. Round 1 is an offline qualifier focusing on analytical aptitude, OSINT, logic puzzles, and clue evaluation. Qualified squads advance to Round 2 for the hands-on forensic exploitation CTF showdown."
+    answer: "Both rounds are conducted offline. Round 1 is an OSINT open-source intelligence qualifier where teams investigate famous real-life cases (such as Sushant Singh Rajput or Princess Diana) using Google, Wikipedia, and public records, submitting a 10-point conclusion evaluated against benchmark rubrics. Top-scoring teams advance to Round 2 for the hands-on forensic exploitation CTF showdown."
   },
   {
     question: "What is the team size, fee, and who is eligible?",
-    answer: "You can enlist a squad of 2 to 4 members with a registration fee of ₹120 per team. Students from any college or university with an interest in cybersecurity, digital forensics, or investigative problem-solving are welcome."
+    answer: "You can enlist a squad of 2 to 4 members with a registration fee of ₹120 per team. Students from any college or university with an interest in cybersecurity, digital forensics, OSINT, or investigative problem-solving are welcome."
   },
   {
     question: "How do we register on Unstop?",
@@ -270,6 +272,6 @@ export const FAQ_ITEMS = [
   },
   {
     question: "What tools and skills do we need?",
-    answer: "Helpful tools include Wireshark, Ghidra/Jadx, CyberChef, SQLite Browser, ExifTool, Volatility 3, Python, and a web browser with DevTools. Prior CTF experience is not mandatory for Round 1!"
+    answer: "For Round 1 (OSINT): Internet browser, Google search techniques, Wikipedia, and critical analytical deduction. For Round 2 (CTF): Wireshark, Ghidra/Jadx, CyberChef, SQLite Browser, ExifTool, Volatility 3, and Python."
   }
 ];

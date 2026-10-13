@@ -49,7 +49,7 @@ export const InteractiveTerminal: React.FC<TerminalProps> = ({ onOpenRegisterMod
         break;
       case 'status':
         newEntries.push(
-          { text: "[+] CASE #8849: Homicide of Vikram Malhotra // TOD: 00:05 AM IST", color: "text-primary" },
+          { text: "[+] CASE #8849: Homicide of Vikram Malhotra // TOD: 01:09 PM IST", color: "text-primary" },
           { text: "[+] Siphoned Fund: ₹47,00,00,000 wired to Oceanic Ventures LLC", color: "text-tertiary" }
         );
         break;

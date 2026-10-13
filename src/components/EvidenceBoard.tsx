@@ -10,7 +10,7 @@ export const EvidenceBoard: React.FC = () => {
       title: "EXHIBIT-A: VIKRAM MALHOTRA",
       tag: "TAG: #8849-01 // THE VICTIM",
       image: "/assets/vikram_face_crosses.jpeg",
-      desc: "Tech Tycoon found dead in Penthouse 42 at 00:05 AM. Master locks disabled remotely at 23:47."
+      desc: "Tech Tycoon found dead in Penthouse 42 at 01:09 PM. Master locks disabled remotely."
     },
     B: {
       title: "EXHIBIT-B: IOT ACCESS LOGS",
@@ -85,7 +85,7 @@ export const EvidenceBoard: React.FC = () => {
                 alt="Vikram Malhotra with Red Cross"
               />
               <div className="absolute bottom-2 right-2 border border-primary-container text-primary-container px-2 py-0.5 font-label-sm font-extrabold uppercase bg-surface-container-lowest/90 tracking-wider">
-                DECEASED: 00:05 AM
+                DECEASED: 01:09 PM
               </div>
             </div>
 
@@ -95,7 +95,7 @@ export const EvidenceBoard: React.FC = () => {
             </div>
             <div className="text-label-md font-label-md text-on-surface font-bold uppercase">VIKRAM MALHOTRA</div>
             <p className="text-body-sm text-on-surface-variant mt-1 text-xs line-clamp-2">
-              Founder of Malhotra Cyber Dynamics. Murdered at 00:05. ₹47 Crore missing.
+              Founder of Malhotra Cyber Dynamics. Murdered at 01:09 PM. ₹47 Crore missing.
             </p>
           </div>
 
@@ -117,7 +117,7 @@ export const EvidenceBoard: React.FC = () => {
             <div className="bg-surface-container-lowest p-2.5 rounded font-mono text-[11px] leading-relaxed text-secondary-fixed border border-outline-variant/60">
               <span className="text-outline-variant">// 23:47:00</span> [CCTV_SYS] Feed severed (CAM 03, 04)<br/>
               <span className="text-outline-variant">// 23:58:01</span> [DOOR_LOCK] Override: Token 0x98FF<br/>
-              <span className="text-primary font-bold">// 00:05:00 [CARDIAC] Signal Flatline</span>
+              <span className="text-primary font-bold">// 01:09:00 PM [CARDIAC] Signal Flatline</span>
             </div>
 
             <p className="text-body-sm text-on-surface-variant mt-2 text-xs">

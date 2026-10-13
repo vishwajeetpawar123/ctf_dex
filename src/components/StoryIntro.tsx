@@ -26,7 +26,7 @@ export const StoryIntro: React.FC = () => {
       status: "CRITICAL BREACH"
     },
     {
-      time: "00:05 IST",
+      time: "01:09 PM IST",
       label: "💀 Estimated Time of Death",
       detail: "Vikram Malhotra found collapsed in his private terminal room. Cyanide trace in glass. Primary hard drive wiped with DBAN.",
       status: "HOMICIDE"
@@ -80,7 +80,7 @@ export const StoryIntro: React.FC = () => {
                 }}
               />
               <div className="absolute top-3 left-3 px-2 py-0.5 bg-crimson text-black font-mono font-bold text-[10px] tracking-wider uppercase">
-                DECEASED // TOD 00:05
+                DECEASED // TOD 01:09 PM
               </div>
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-void-950 p-3 pt-8 text-xs font-mono text-gray-300">
                 Found in Penthouse 42 Private Study

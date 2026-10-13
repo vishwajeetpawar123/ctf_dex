@@ -53,7 +53,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenRegisterModal }) => {
 
       {/* Narrative Lead Pitch */}
       <p className="mt-3 sm:mt-space-md max-w-3xl text-sm sm:text-base md:text-body-lg font-body-lg text-on-surface-variant font-light px-1 sm:px-0 leading-relaxed">
-        A Tech Tycoon Murdered at <span className="text-primary font-mono font-bold">00:05</span>.{" "}
+        A Tech Tycoon Murdered at <span className="text-primary font-mono font-bold">01:09 PM</span>.{" "}
         <span className="text-secondary font-mono font-bold">₹47 Crore Laundered</span>.{" "}
         <span className="text-tertiary font-mono font-bold">6 Suspects</span>.{" "}
         The Evidence is Encrypted in the RAM. Can your squad reconstruct the breach before time runs out?
